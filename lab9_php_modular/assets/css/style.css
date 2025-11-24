@@ -1,0 +1,218 @@
+:root {
+    /* Palet Warna Premium (User Request) */
+    --primary-color: #6366f1;     /* Indigo Violet */
+    --primary-dark: #4f46e5;      /* Indigo Dark */
+    --secondary-color: #9ca3af;   /* Soft Gray */
+    --success-color: #10b981;     /* Emerald */
+    --danger-color: #ef4444;      /* Modern Red */
+    --warning-color: #eab308;     /* Gold Neon */
+    
+    /* Background + Text */
+    --bg-body: #f3f4f6;           /* Light Gray Clean */
+    --bg-card: #ffffff;           /* Pure White */
+    --text-dark: #1e293b;         /* Slate */
+    --text-muted: #6b7280;        /* Muted Slate */
+    
+    /* Shadow (Premium) */
+    --shadow-soft: 0 4px 20px rgba(0,0,0,0.05);
+    --shadow-hover: 0 12px 25px rgba(99,102,241,0.2); /* Bayangan Ungu Halus */
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif; /* Font Utama */
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+}
+
+/* --- NAVBAR STYLING --- */
+.navbar {
+    /* Gradasi Biru Profesional */
+    background: linear-gradient(90deg, var(--primary-color) 10%, var(--primary-dark) 100%) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    font-weight: 700;
+}
+
+/* --- CARD STYLING (KOTAK KONTEN) --- */
+.card {
+    border: none; /* Hilangkan garis pinggir default */
+    border-radius: 15px; /* Sudut membulat */
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* Efek saat mouse diarahkan ke card (melayang sedikit) */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 1.2rem 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 5px 15px rgba(78, 115, 223, 0.3);
+    transform: translateY(-2px);
+}
+
+/* --- TABLE STYLING --- */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #eaecf4;
+    color: var(--text-dark);
+    border-bottom: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.05); /* Highlight biru tipis saat hover */
+}
+
+/* --- KHUSUS HALAMAN LOGIN --- */
+.login-body {
+    /* Background Gradient Full Screen */
+    background: linear-gradient(135deg, #242425 0%, #57347b 100%);
+    min-height: 100vh;
+}
+
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-login {
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border: none;
+    overflow: hidden;
+    max-width: 400px;
+    width: 100%;
+}
+
+.card-login .card-header {
+    background: #fff;
+    color: var(--text-dark);
+    border-bottom: none;
+    padding-top: 2rem;
+    padding-bottom: 0;
+}
+
+.card-login .card-header h4 {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+/* Mempercantik Input Form */
+.form-control {
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: 1px solid #d1d3e2;
+    background-color: #fdfdfe;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+/* Efek glowing halus untuk button utama */
+.btn-primary {
+    position: relative;
+}
+.btn-primary:hover {
+    box-shadow: 0 0 15px rgba(99,102,241,0.6);
+}
+
+/* Top border gradient untuk card */
+.card-header {
+    border-top: 4px solid;
+    border-image: linear-gradient(90deg, #6366f1, #a855f7) 1;
+}
+
+/* Smooth Hover ke table */
+.table-hover tbody tr:hover {
+    background-color: rgba(99,102,241,0.10) !important;
+    transition: .25s ease;
+}
+/* --- TOMBOL KECIL (UPDATE: VERSI MINI) --- */
+.btn-xs {
+    padding: 2px 8px !important;      /* Padding atas-bawah ditipiskan */
+    font-size: 10px !important;       /* Ukuran huruf diperkecil */
+    line-height: 1.5 !important;      /* Jarak baris dirapatkan */
+    border-radius: 4px !important;    /* Sudut sedikit lebih kotak biar tegas */
+    font-weight: 600;
+    text-transform: uppercase;        /* Huruf kapital semua biar rapi */
+    letter-spacing: 0.5px;
+    margin: 0 2px;                    /* Jarak antar tombol dikit aja */
+}
+
+/* Warna khusus tombol kecil (Tetap sama dengan tema premium) */
+.btn-xs.btn-warning {
+    background-color: var(--warning-color);
+    color: #fff;
+    box-shadow: none; /* Hilangkan bayangan biar tidak terlihat tebal */
+}
+
+.btn-xs.btn-danger {
+    background-color: var(--danger-color);
+    box-shadow: none;
+}
+
+/* Efek Hover simpel */
+.btn-xs:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
